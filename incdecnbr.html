@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang='en'>
+<head><title></title>
+<style>
+	body { 
+		text-align: center;
+	 }
+	button, input {
+		font-size: 2em;
+		text-align: center;
+	}
+</style>
+<script lang='javascript'>
+	var nbr = 0;
+	function changeNbr(chgAmt) {
+		var theNbrCtrl = document.getElementById('theNbr');
+		nbr = nbr + Number(chgAmt);
+		theNbrCtrl.value = nbr;
+		/*
+		{
+			theNbrCtrl.style.color = "black";
+			if(nbr % 2 == 0) {
+				theNbrCtrl.style.color = "red";
+			}
+		}
+		{
+			theNbrCtrl.style.fontStyle = "normal";
+			if(nbr % 3 == 0) {
+				theNbrCtrl.style.fontStyle = "italic";
+			}
+		}
+		{
+			theNbrCtrl.style.fontSize = "2em";
+			if(nbr % 7 == 0) {
+				theNbrCtrl.style.fontSize = "2.5em";
+			}
+		}
+		*/
+	}
+</script>
+<body>
+	<button id='minus' onclick='changeNbr(-1);'>-</button>
+	<input id='theNbr' type='text' value='0' size="5">
+	<button id='plus' onclick='changeNbr(1);'>+</button>
+</body>
+</html>

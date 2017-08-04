@@ -26,30 +26,42 @@
 	// console.log("The total is", total);
 	// //
 	// javascript assignment 1: calc (a*a)*(b*b)
-	function aSqrTimesBSqr(a, b) {
-		var acalced;
-		if(a % 2 == 0) {
-			acalced = a * a * a;
-		} else {
-			acalced = a * a;
-		}
-		var bcalced;
-		if(b % 2 == 0) {
-			bcalced = b * b * b;
-		} else {
-			bcalced = b * b;
-		}
-		var value = acalced * bcalced;
-		console.log('For a =', a,'and b =', b, 'value =', value);
+	// function aSqrTimesBSqr(a, b) {
+	// 	var acalced;
+	// 	if(a % 2 == 0) {
+	// 		acalced = a * a * a;
+	// 	} else {
+	// 		acalced = a * a;
+	// 	}
+	// 	var bcalced;
+	// 	if(b % 2 == 0) {
+	// 		bcalced = b * b * b;
+	// 	} else {
+	// 		bcalced = b * b;
+	// 	}
+	// 	var value = acalced * bcalced;
+	// 	console.log('For a =', a,'and b =', b, 'value =', value);
+	// }
+	// aSqrTimesBSqr(2,3);
+	// aSqrTimesBSqr(7,13);
+	// aSqrTimesBSqr(27,155);
+	// aSqrTimesBSqr(56,3450);
+
+	function displayInput() {
+		var inputCtrl = document.getElementById('thetext');
+		var theValue = inputCtrl.value;
+		var outputCtrl = document.getElementById('thetarget');
+		outputCtrl.value = theValue;
+		console.log(theValue);
 	}
-	aSqrTimesBSqr(2,3);
-	aSqrTimesBSqr(7,13);
-	aSqrTimesBSqr(27,155);
-	aSqrTimesBSqr(56,3450);
 
 </script>
 </head>
 <body>
-
+	<label>This is a label</label>
+	<input id='thetext' type="text" value='starting value'>
+	<button onclick='displayInput();'>Click Me!</button>
+	<p></p>
+	<input id='thetarget' type='text'>
 </body>
 </html>
