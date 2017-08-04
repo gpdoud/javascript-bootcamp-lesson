@@ -12,10 +12,15 @@
 </style>
 <script lang='javascript'>
 	var nbr = 0;
+	// chgAmt is passed in when the buttons are clicked
 	function changeNbr(chgAmt) {
+		// get a reference to the <input> tag
 		var theNbrCtrl = document.getElementById('theNbr');
+		// add the chgAmt number to the current nbr
 		nbr = nbr + Number(chgAmt);
+		// put the updated nbr back in the <input> tag
 		theNbrCtrl.value = nbr;
+	{
 		/*
 		{
 			theNbrCtrl.style.color = "black";
@@ -37,10 +42,13 @@
 		}
 		*/
 	}
+	}
 </script>
 <body>
+	<!-- The changeNbr(-1) causes the number to be decremented -->
 	<button id='minus' onclick='changeNbr(-1);'>-</button>
 	<input id='theNbr' type='text' value='0' size="5">
+	<!-- The changeNbr(1) causes the number to be incremented -->
 	<button id='plus' onclick='changeNbr(1);'>+</button>
 </body>
 </html>
