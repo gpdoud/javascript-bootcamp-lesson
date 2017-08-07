@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang='en'>
+<head><title></title>
+<style>* { text-align: center; } </style>
+<script lang='javascript'>
+	var friendList = ['Ray','Randy','Scott','Rusty','Steve','Jeff','Kenny'];
+	function friends() {
+		var pCtrl = document.getElementById('friends');
+		var comma = ' ';
+		for(var idx = 0; idx < friendList.length; idx++) {
+			var friend = friendList[idx];
+			pCtrl.textContent += comma + ' ' + friend;
+			comma = ',';
+		}
+	}
+</script>
+</head>
+<body>
+	<button onclick='friends()'>Friends</button>
+	<p id='friends'/>
+</body>
+</html>
