@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang='en'>
+<head><title></title>
+<style>* { text-align: center; } </style>
+<script lang='javascript'>
+	function calcFact() {
+		var nbrCtrl = document.getElementById('nbr');
+		var ansCtrl = document.getElementById('ans');
+		var nbr = Number(nbrCtrl.value);
+		
+		var fac = 1;
+		for(var fac = 1; nbr > 0; nbr--) {
+			fac = fac * nbr;
+		}
+		// for(var idx = 2; idx <= nbr; idx++) {
+		// 	fac = fac * idx;
+		// }
+		ansCtrl.value = fac;
+	}
+</script>
+</head>
+<body>
+	<label>Enter Number:</label>
+	<input id='nbr' placeholder="Number" size="5">
+	<button onclick='calcFact()'>Calculate Factorial</button>
+	<input id='ans' placeholder="The answer here">
+</body>
+</html>

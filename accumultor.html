@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang='en'>
+<head><title></title>
+<style>* { text-align: center; } </style>
+<script lang='javascript'>
+	function calcFact() {
+		var nbrCtrl = document.getElementById('nbr');
+		var ansCtrl = document.getElementById('ans');
+		var nbr = Number(nbrCtrl.value);
+		
+		var ans = 0;
+		for(var idx = 1; idx <= nbr; idx++) {
+			ans += idx;
+		}
+		ansCtrl.value = ans;
+	}
+</script>
+</head>
+<body>
+	<label>Enter Number:</label>
+	<input id='nbr' placeholder="Number" size="5">
+	<button onclick='calcFact()'>Accumulate</button>
+	<input id='ans' placeholder="The answer here">
+</body>
+</html>
