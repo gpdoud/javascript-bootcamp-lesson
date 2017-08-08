@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head><title></title>
+<style> p { text-align: center; font-family: Courier New; width: 50%; }</style>
+<script lang='javascript'>
+"use strict";
+	function ready() {
+		var pCtrl = document.getElementById('ptag');
+		var done = false;
+		var nbr = 1;
+		var cnt = 0;
+		var arr = []
+		while(!done) {
+			if(nbr % 11 == 0 || nbr % 13 == 0) {
+				cnt++;
+				arr.push(nbr);
+			}
+			if(cnt == 20) {
+				done = true;
+			} else {
+				nbr++;
+			}
+		}
+		pCtrl.textContent = 'The number is ' + nbr 
+		+ ' and the numbers are ' + arr.join(' ');
+	}
+</script>
+<head>
+<body onload='ready()'>
+	<p id='ptag'></p>
+</body>
+</html>

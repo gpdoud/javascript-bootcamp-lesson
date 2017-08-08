@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head><title></title>
+<style> p { text-align: center; font-family: Courier New; }</style>
+<script lang='javascript'>
+	var arr = 0;
+	function ready() {
+		var pCtrl = document.getElementById('ptag');
+		var fib = [1,2];
+		for(var idx = 0; idx < 10; idx++) {
+			fib.push(fib[idx] + fib[idx+1]);
+		}
+		pCtrl.textContent = fib.join();
+	}
+</script>
+<head>
+<body onload='ready()'>
+	<p id='ptag'></p>
+</body>
+</html>
