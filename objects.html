@@ -1,30 +1,44 @@
 <!doctype html>
 <html>
 <head><title></title>
+<style> table { width: 100%; }</style>
 <script lang='javascript'>
 "use strict";
 	var students = [];
 	function ready() {
-		var oKim = { Id: 0, Name: 'Kim' };
-		var oLong = { Id: 1, Name: 'Long' };
-		var oElisha = { Id: 2, Name: 'Elisha' };
-		var oEric = { Id: 3, Name: 'Eric' };
-		var oPhuc = { Id: 4, Name: 'Phuc' };
-		var oStudent = { Id: 5, Name: 'The Phantom' };
-		students = [oKim, oLong, oElisha, oEric, oPhuc, oStudent];
+		students = [
+			{ Id: 0, Name: 'Kim', City: 'West Chester' },
+			{ Id: 1, Name: 'Long', City: 'West Chester' },
+			{ Id: 2, Name: 'Elisha', City: 'Mason' },
+			{ Id: 3, Name: 'Eric', City: 'Cincinnati' },
+			{ Id: 4, Name: 'Phuc', City: 'Cincinnati' }
+		];
 
-		var ulCtrl = document.getElementById('students');
+		var tbodyCtrl = document.getElementById('students');
 		for(var idx = 0; idx < students.length; idx++) {
+			var id = students[idx].Id;
 			var name = students[idx].Name;
-			var liTag = '<li>' + name + '</li>';
-			ulCtrl.innerHTML += liTag;
+			var city = students[idx].City;
+			var studentRow = '<tr>';
+			studentRow += '<td>' + id + '</td>';
+			studentRow += '<td>' + name + '</td>';
+			studentRow += '<td>' + city + '</td>';
+			studentRow += '</tr>';
+
+			tbodyCtrl.innerHTML += studentRow;
 		}
 
 	}
 </script>
 </head>
 <body onload='ready()'>
-	<ul id='students'>
-	</ul>
+	<table>
+		<thead>
+			<tr><td>Id</td><td>Name</td><td>City</td></tr>
+		</thead>
+		<tbody id='students'>
+			<!-- <tr><td>0</td><td>Kim</td><td>West Chester</td></tr> -->
+		</tbody>
+	</table>
 </body>
 </html>
