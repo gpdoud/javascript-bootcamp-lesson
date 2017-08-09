@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head><title></title>
+<script lang='javascript'>
+"use strict";
+	var students = [];
+	function ready() {
+		var oKim = { Id: 0, Name: 'Kim' };
+		var oLong = { Id: 1, Name: 'Long' };
+		var oElisha = { Id: 2, Name: 'Elisha' };
+		var oEric = { Id: 3, Name: 'Eric' };
+		var oPhuc = { Id: 4, Name: 'Phuc' };
+		var oStudent = { Id: 5, Name: 'The Phantom' };
+		students = [oKim, oLong, oElisha, oEric, oPhuc, oStudent];
+
+		var ulCtrl = document.getElementById('students');
+		for(var idx = 0; idx < students.length; idx++) {
+			var name = students[idx].Name;
+			var liTag = '<li>' + name + '</li>';
+			ulCtrl.innerHTML += liTag;
+		}
+
+	}
+</script>
+</head>
+<body onload='ready()'>
+	<ul id='students'>
+	</ul>
+</body>
+</html>
